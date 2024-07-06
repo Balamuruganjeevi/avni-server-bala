@@ -1,0 +1,14 @@
+{
+  "query": "query contacts($filter: ContactFilter!, $opts: Opts!) {\n    contacts(filter: $filter, opts: $opts) {\n        id\n        name\n        maskedPhone\n phone \n    }\n}",
+  "variables": {
+    "filter": {
+      "includeGroups": "${groupId}"
+    },
+    "opts": {
+      "limit": "${limit}",
+      "offset": "${offset}",
+      "orderWith": "id",
+      "order": "ASC"
+    }
+  }
+}

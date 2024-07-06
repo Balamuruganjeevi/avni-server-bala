@@ -1,0 +1,1674 @@
+{
+	"info": {
+		"_postman_id": "5ddd5153-6c67-4172-8ae8-11dc842c6b0e",
+		"name": "Avni Data Setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "695405"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "H1 - Create Location Type - State",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"State-Example\",\n    \"level\": \"2003\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/addressLevelType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"addressLevelType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H1 - Create Location Type - Sub Division",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Sub Division-Example\",\n    \"level\": \"2002\",\n    \"parent\": {\n        \"name\": \"State-Example\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/addressLevelType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"addressLevelType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H1 - Create Location Type - City",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"City-Example\",\n    \"level\": \"2001\",\n    \"parent\": {\n        \"name\": \"Sub Division-Example\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/addressLevelType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"addressLevelType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H2 - Create Location Type - Union",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Union-Example\",\n    \"level\": \"2006\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/addressLevelType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"addressLevelType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H2 - Create Location Type - Rajya",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rajya-Example\",\n    \"level\": \"2005\",\n    \"parent\": {\n        \"name\": \"Union-Example\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/addressLevelType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"addressLevelType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H2 - Create Location Type - Municipal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Municipal-Example\",\n    \"level\": \"2005\",\n    \"parent\": {\n        \"name\": \"Rajya-Example\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/addressLevelType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"addressLevelType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H1 - Create Location - State 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"State 1\", response[\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"State 1\",\n        \"level\": 1,\n        \"type\": \"State-Example\",\n        \"parents\": [\n            {}\n        ]\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/locations",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "H1 - Create Location - Sub Division 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Sub Division 1\", response[\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Sub Division 1\",\n        \"level\": 2002,\n        \"type\": \"Sub Division-Example\",\n        \"parent\": {\n            \"id\": {{State 1}}\n        }\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/locations",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Location - City 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"City 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"City 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"City 1\",\n        \"level\": 2003,\n        \"type\": \"City-Example\",\n        \"parent\": {\n            \"id\": {{Sub Division 1}}\n        }\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/locations",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Cognito Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/cognito-details",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"cognito-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Syncs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/resetSyncs?lastModifiedDateTime=1900-01-01T00:00:00.000Z&now=2022-08-22T06:31:29.253Z&size=100&page=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"resetSyncs"
+							],
+							"query": [
+								{
+									"key": "lastModifiedDateTime",
+									"value": "1900-01-01T00:00:00.000Z"
+								},
+								{
+									"key": "now",
+									"value": "2022-08-22T06:31:29.253Z"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Catchment 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Catchment 1\", response[\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"deleteFastSync\": false,\n    \"name\": \"Catchment 1\",\n    \"locationIds\": [\n        {{City 1}}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/catchment",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"catchment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Catchment to User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin@example\",\n    \"name\": \"Example ka Admin\",\n    \"id\": 2,\n    \"organisationId\": 2,\n    \"email\": \"foo@example.com\",\n    \"phoneNumber\": \"+919090909090\",\n    \"disabledInCognito\": false,\n    \"operatingIndividualScope\": \"ByCatchment\",\n    \"settings\": null,\n    \"syncSettings\": {},\n    \"roles\": [\n        \"organisation_admin\",\n        \"user\"\n    ],\n    \"catchmentId\": {{Catchment 1}},\n    \"voided\": false,\n    \"admin\": false,\n    \"orgAdmin\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/user/2",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Create Menu Items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Menu Item 1\", response[0][\"id\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"group\": \"Functionality\",\n        \"type\": \"Link\",\n        \"displayKey\": \"dawa-prapatra\",\n        \"linkFunction\": \"({params}) => {return `https://reporting.avniproject.org/public/question/11265388-5909-438e-9d9a-6faaa0c5863f?username=${encodeURIComponent(user.username)}&name=${encodeURIComponent(user.name)}&month=${params.moment().month() + 1}&year=${params.moment().year()}`;}\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/menuItems",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"menuItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Menu Item 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/web/menuItem/{{Menu Item 1}}",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"menuItem",
+								"{{Menu Item 1}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Menu Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/menuItem?lastModifiedDateTime=2020-07-24T08:41:27.815Z&size=100&page=0",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"menuItem"
+							],
+							"query": [
+								{
+									"key": "lastModifiedDateTime",
+									"value": "2020-07-24T08:41:27.815Z"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Menu Items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{origin}}/web/menuItem",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"menuItem"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Designer",
+			"item": [
+				{
+					"name": "Create Genders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\"name\": \"Male-Example\", \"uuid\": \"6a15b2bc-a556-41f0-b8c1-a4895ceacb88\"},\n    {\"name\": \"Female-Example\", \"uuid\": \"a8997040-2d01-46b9-899e-03359dafd228\"},\n    {\"name\": \"Other-Example\", \"uuid\": \"a4db848e-45cb-4466-98fe-c195804f2dae\"}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/genders",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"genders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Subject Type 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Subject Type 1\",\n    \"groupRoles\": [],\n    \"subjectSummaryRule\": \"\",\n    \"shouldSyncByLocation\": true,\n    \"type\": \"Individual\",\n    \"directlyAssignable\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/subjectType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"subjectType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject Type 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Subject Type 2\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Subject Type 2 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Subject Type 2\",\n    \"groupRoles\": [],\n    \"subjectSummaryRule\": \"\",\n    \"shouldSyncByLocation\": true,\n    \"type\": \"Individual\",\n    \"directlyAssignable\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/subjectType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"subjectType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Group Subject Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Group Subject Type 1\",\n    \"groupRoles\": [\n        {\n            \"voided\": false,\n            \"groupRoleUUID\": \"274d741c-0772-44be-a5aa-c89ce7ede61b\",\n            \"role\": \"Group Subject Type 1 Member 1\",\n            \"subjectMemberName\": \"Subject Type 1\",\n            \"minimumNumberOfMembers\": 1,\n            \"maximumNumberOfMembers\": 10\n        }\n    ],\n    \"subjectSummaryRule\": \"\",\n    \"shouldSyncByLocation\": true,\n    \"type\": \"Group\",\n    \"memberSubjectType\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/subjectType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"subjectType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Program 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Program 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Program 1\",\n    \"colour\": \"#ff0000\",\n    \"programSubjectLabel\": \"\",\n    \"enrolmentSummaryRule\": \"\",\n    \"subjectTypeUuid\": \"{{Subject Type 1 UUID}}\",\n    \"enrolmentEligibilityCheckRule\": \"\",\n    \"enrolmentEligibilityCheckDeclarativeRule\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/program",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"program"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program Encounter Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Program Encounter Type 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Program Encounter Type 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Program Encounter Type 1\",\n    \"encounterEligibilityCheckRule\": \"\",\n    \"encounterEligibilityCheckDeclarativeRule\": null,\n    \"subjectTypeUuid\": \"{{Subject Type 1 UUID}}\",\n    \"programUuid\": \"{{Program 1 UUID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/encounterType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"encounterType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add General Encounter Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"General Encounter Type 1\",\n    \"encounterEligibilityCheckRule\": \"\",\n    \"encounterEligibilityCheckDeclarativeRule\": null,\n    \"subjectTypeUuid\": \"{{Subject Type 1 UUID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/encounterType",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"encounterType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Core Tx Data",
+			"item": [
+				{
+					"name": "Create Subject - 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Subject 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Subject 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"4a36a342-e511-436f-a201-637d83b79123\",\n    \"firstName\": \"Subject 1\",\n    \"voided\": false,\n    \"dateOfBirth\": null,\n    \"registrationDate\": \"2022-07-13\",\n    \"genderUUID\": null,\n    \"addressLevelUUID\": \"{{City 1 UUID}}\",\n    \"subjectTypeUUID\": \"{{Subject Type 1 UUID}}\",\n    \"observations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": []\n    },\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/individuals",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"individuals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject - 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Subject 2\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Subject 2 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"ff60679f-1738-4185-9bf6-0047787dcbe4\",\n    \"firstName\": \"Subject 2\",\n    \"voided\": false,\n    \"dateOfBirth\": null,\n    \"registrationDate\": \"2022-07-13\",\n    \"genderUUID\": null,\n    \"addressLevelUUID\": \"{{City 1 UUID}}\",\n    \"subjectTypeUUID\": \"{{Subject Type 2 UUID}}\",\n    \"observations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": []\n    },\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/individuals",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"individuals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program Enrolment 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Enrolment 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Enrolment 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"7635ec62-2442-44cd-a0fa-a184e935ea4a\",\n    \"voided\": false,\n    \"programUUID\": \"{{Program 1 UUID}}\",\n    \"enrolmentDateTime\": \"2022-07-13T17:26:20+05:30\",\n    \"programExitDateTime\": null,\n    \"individualUUID\": \"{{Subject 1 UUID}}\",\n    \"observations\": [],\n    \"programExitObservations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": [],\n        \"exit\": false\n    },\n    \"checklists\": [],\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/programEnrolments",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"programEnrolments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Program Enrolment 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Enrolment 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Enrolment 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"dad083d8-485b-4201-b239-5579fe5a05a0\",\n    \"voided\": false,\n    \"programUUID\": \"{{Program 1 UUID}}\",\n    \"enrolmentDateTime\": \"2022-07-13T17:26:20+05:30\",\n    \"programExitDateTime\": null,\n       \"individualUUID\": \"{{Subject 2 UUID}}\",\n    \"observations\": [],\n    \"programExitObservations\": [],\n    \"visitSchedules\": [],\n    \"decisions\": {\n        \"enrolmentDecisions\": [],\n        \"encounterDecisions\": [],\n        \"registrationDecisions\": [],\n        \"enrolmentObservations\": [],\n        \"encounterObservations\": [],\n        \"registrationObservations\": [],\n        \"exit\": false\n    },\n    \"checklists\": [],\n    \"identifierAssignmentUuids\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/programEnrolments",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"programEnrolments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create Task Type 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Task Type 1\",\n        \"taskTypeName\": \"Call\",\n        \"metadataSearchFields\": []\n    },\n    {\n        \"name\": \"Task Type 2\",\n        \"taskTypeName\": \"OpenSubject\",\n        \"metadataSearchFields\": []\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/taskTypes",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"taskTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task Status 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Task Status 1\",\n    \"isTerminal\": \"false\",\n    \"taskTypeId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/taskStatus",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"taskStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create task concepts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"dataType\": \"Text\",\n        \"keyValues\": [\n            {\"key\": \"contact_number\", \"value\": \"yes\"}\n        ],\n        \"name\": \"Contact number\",\n        \"uuid\": \"f6375fda-5ea2-479b-91d9-df5a85172820\"\n    },\n    {\n        \"dataType\": \"Numeric\",\n        \"keyValues\": [],\n        \"name\": \"Duration of talk\",\n        \"uuid\": \"d17f48ca-6cd9-4c6e-a4d8-e6e550b98417\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/concepts",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"concepts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"External ID\": \"071e472f-df83-4a64-977e-9ca4c37176c2\",\n  \"Voided\": false,\n  \"Task type\": \"Task Type 1\",\n  \"Task status\": \"Task Status 1\",\n  \"Name\": \"Task 1\",\n  \"Scheduled on\": \"2022-07-21T17:32:28Z\",\n  \"Completed on\": null,\n  \"Assigned to\": \"admin@example\",\n  \"metadata\": {\n      \"Contact number\": \"9090909090\"\n  },\n  \"observations\": {\n      \"Duration of talk\": 25\n  },\n  \"Subject ID\": \"{{Subject 1 UUID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/api/task",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"api",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task 1 Form",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Task 1 Form\",\n    \"formType\": \"Task\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/forms",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"forms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mobile Reports",
+			"item": [
+				{
+					"name": "Create Standard Report 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Standard Report 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Standard Report 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Standard Report - 1\",\n    \"description\": \"\",\n    \"color\": \"#ff0000\",\n    \"query\": null,\n    \"standardReportCardTypeId\": 1,\n    \"iconFileS3Key\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/card",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dashboard 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be okay\", function () {",
+									"    pm.response.to.not.be.error;",
+									"});",
+									"",
+									"const response = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Dashboard 1\", response[\"id\"]);",
+									"pm.collectionVariables.set(\"Dashboard 1 UUID\", response[\"uuid\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dashboard - 1\",\n    \"description\": \"\",\n    \"sections\": [\n        {\n            \"name\": \"Section 1\",\n            \"description\": \"Section 1 Desc\",\n            \"viewType\": \"Tile\",\n            \"displayOrder\": 1,\n            \"cards\": [\n                {\n                    \"uuid\": \"{{Standard Report 1 UUID}}\",\n                    \"id\": {{Standard Report 1}},\n                    \"displayOrder\": 1\n                }\n            ],\n            \"uuid\": \"ec159068-2f3e-41b1-aa7b-db8719fde24a\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{origin}}/web/dashboard",
+							"host": [
+								"{{origin}}"
+							],
+							"path": [
+								"web",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assign Subject 1 to User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response should be okay\", function () {",
+							"    pm.response.to.not.be.error;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin@example\",\n    \"name\": \"Example ka Admin\",\n    \"id\": 2,\n    \"organisationId\": 2,\n    \"email\": \"foo@example.com\",\n    \"phoneNumber\": \"+919090909090\",\n    \"disabledInCognito\": false,\n    \"operatingIndividualScope\": \"None\",\n    \"settings\": null,\n    \"syncSettings\": {},\n    \"roles\": [\n        \"organisation_admin\",\n        \"user\"\n    ],\n    \"catchmentId\": {{Catchment 1}},\n    \"voided\": false,\n    \"admin\": false,\n    \"orgAdmin\": true,\n    \"directAssignmentIds\": [\n        {{Subject 1}}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{origin}}/user/2",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Individuals",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"response should be okay\", function () {",
+							"    pm.response.to.not.be.error;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{origin}}/individual?subjectTypeUuid={{Subject Type 1 UUID}}&lastModifiedDateTime=2020-07-24T08:41:27.815Z&size=100&page=0",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"individual"
+					],
+					"query": [
+						{
+							"key": "subjectTypeUuid",
+							"value": "{{Subject Type 1 UUID}}"
+						},
+						{
+							"key": "lastModifiedDateTime",
+							"value": "2020-07-24T08:41:27.815Z"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organisation Config",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"settings\": {\n        \"languages\": [\"en\"]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{origin}}/organisationConfig",
+					"host": [
+						"{{origin}}"
+					],
+					"path": [
+						"organisationConfig"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "State 1",
+			"value": ""
+		},
+		{
+			"key": "District 1",
+			"value": ""
+		},
+		{
+			"key": "Sub Division 1",
+			"value": ""
+		},
+		{
+			"key": "City 1",
+			"value": ""
+		},
+		{
+			"key": "City 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Catchment 1",
+			"value": ""
+		},
+		{
+			"key": "Menu Item 1",
+			"value": ""
+		},
+		{
+			"key": "Subject Type 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Subject Type 2",
+			"value": ""
+		},
+		{
+			"key": "Subject Type 2 UUID",
+			"value": ""
+		},
+		{
+			"key": "Program 1",
+			"value": ""
+		},
+		{
+			"key": "Program 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Program Encounter Type 1",
+			"value": ""
+		},
+		{
+			"key": "Program Encounter Type 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Subject 1",
+			"value": ""
+		},
+		{
+			"key": "Subject 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Subject 2",
+			"value": ""
+		},
+		{
+			"key": "Subject 2 UUID",
+			"value": ""
+		},
+		{
+			"key": "Enrolment 1",
+			"value": ""
+		},
+		{
+			"key": "Enrolment 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Standard Report 1",
+			"value": ""
+		},
+		{
+			"key": "Standard Report 1 UUID",
+			"value": ""
+		},
+		{
+			"key": "Dashboard 1",
+			"value": ""
+		},
+		{
+			"key": "Dashboard 1 UUID",
+			"value": ""
+		}
+	]
+}
