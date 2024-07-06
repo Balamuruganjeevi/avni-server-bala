@@ -1,0 +1,1 @@
+ALTER TABLE program_encounter ADD COLUMN max_date_time TIMESTAMP NULL;

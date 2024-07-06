@@ -1,0 +1,42 @@
+.idea
+target
+fs/config/modules/*
+external/*.*
+**/.DS_Store
+**/*.iml
+input/*.xlsx
+build
+.gradle
+out
+**/openchs.asc
+classes/*
+minor_version
+major_version
+**/rules/*.js
+
+# VSCode files
+.vscode
+.project
+.settings
+.classpath
+bin/
+avni-server-api/org.avni.domain.Concept/
+local.properties
+_1*
+segments_2
+write.lock
+
+# Lucene files
+**/_*.*
+**/segments*
+
+#Local files
+dev-commands.txt
+/log/
+/avni-server-api/src/test/resources/externalTestDataSensitive.sql
+/report.html
+/report.json
+/static/
+/avni-server-api/log/
+/blacklisted.json
+**/*.env
